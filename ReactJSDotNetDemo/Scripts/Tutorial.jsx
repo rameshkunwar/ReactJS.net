@@ -22,14 +22,22 @@
         );
     }
 
-    componentWillMount() {
+    loadCommentsFromServer() {
         const xhr = new XMLHttpRequest();
         xhr.open('get', this.props.url, true);
         xhr.onload = () => {
             const data = JSON.parse(xhr.responseText);
             this.setState({ data: data });
-        }
+        };
         xhr.send();
+    }
+
+    componentDidMount() {
+        this.loadCommentsFromServer();
+        window.setInterval(
+            () => this.loadCommentsFromServer(),
+            this.props.pollInterval,
+        );
     }
 
     render() {
