@@ -38,7 +38,8 @@ namespace ReactJSDotNetDemo.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            //return View();
+            return View(_comments);
         }
 
         [OutputCache(Location = OutputCacheLocation.None)] //prevent browser from caching the response

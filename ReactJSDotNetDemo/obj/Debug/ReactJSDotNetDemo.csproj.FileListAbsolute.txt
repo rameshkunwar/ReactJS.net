@@ -99,3 +99,6 @@ C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\x86\ClearScr
 C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\x86\v8-libcpp-ia32.dll
 C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\x86\v8-base-ia32.dll
 C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\x86\v8-ia32.dll
+C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\System.Web.Optimization.React.dll
+C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\System.Web.Optimization.React.pdb
+C:\Users\rames\source\repos\ReactJSDotNetDemo\ReactJSDotNetDemo\bin\System.Web.Optimization.React.xml

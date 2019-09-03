@@ -1,7 +1,8 @@
 ﻿class CommentBox extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { data: [] };
+        {/* this.state = { data: [] }; */ }
+        this.state = { data: this.props.initialData };
         this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
     }
 
@@ -29,7 +30,7 @@
           
 
     componentDidMount() {
-        this.loadCommentsFromServer();
+        {/* this.loadCommentsFromServer(); */}
         window.setInterval(
             () => this.loadCommentsFromServer(),
             this.props.pollInterval,
@@ -78,9 +79,17 @@ class CommentList extends React.Component {
     }
 }
 
+function createRemarkable() {
+    var remarkable =
+        "undefined" != typeof global && global.Remarkable
+            ? global.Remarkable
+            : window.Remarkable;
+    return new remarkable();
+}
+
 class Comment extends React.Component {
     rawMarkup() {
-        const md = new Remarkable();
+        const md = createRemarkable(); {/*new Remarkable(); */ }
         const rawMarkup = md.render(this.props.children.toString());
         return { __html: rawMarkup };
     }
@@ -149,9 +158,9 @@ class CommentForm extends React.Component {
         );
     }
 }
-ReactDOM.render(<CommentBox
-    url={commentUrl}
+{/* ReactDOM.render(<CommentBox
+    url="/Comments"
     submitUrl="/Comments/New"
-/>, document.getElementById('content'));
-//ReactDOM.render(<CommentBox data={data} />, document.getElementById('content'));
+/>, document.getElementById('content')); */}
+
 
